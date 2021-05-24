@@ -1,0 +1,118 @@
+CREATE TABLE Director (
+    ID VARCHAR(8) CONSTRAINT DNI_pk PRIMARY KEY,
+    Telefono INT NOT NULL, 
+    FechaIngreso DATE NOT NULL,
+    Fecha_Nac DATE,
+    Nombre VARCHAR(40),	
+    puesto VARCHAR(40)
+);
+
+CREATE TABLE Asesoria (
+    ID VARCHAR(8) CONSTRAINT Asesoria_pk PRIMARY KEY,
+    nombre_Empresa  VARCHAR (50) NOT NULL,
+    Localización VARCHAR(50),
+    puesto VARCHAR(40),
+    nombre VARCHAR(40) NOT NULL
+    );
+
+CREATE TABLE Empleados (
+    ID VARCHAR(8) CONSTRAINT Empleados_pk PRIMARY KEY,
+    Nombre VARCHAR(40),
+    Puesto VARCHAR(25) NOT NULL,
+    FechaIng DATE,
+    Fecha_Nac DATE,
+    Salario INT NOT NULL
+);
+
+CREATE TABLE Materiales (
+    ID VARCHAR(8) CONSTRAINT tipoMaterial_pk PRIMARY KEY,
+    Nombre VARCHAR(40) NOT NULL,
+    Salario VARCHAR(40) NOT NULL,
+    Especialidad VARCHAR(25) NOT NULL
+);
+CREATE TABLE Equipo_Técnico (
+    ID VARCHAR(8) CONSTRAINT Evento_pk PRIMARY KEY,
+    nombre VARCHAR(40),
+    puesto VARCHAR(40),
+    Area INT NOT NULL,
+    Espacio VARCHAR(20) NOT NULL
+    );
+
+CREATE TABLE Retransmision (
+    ID VARCHAR(20) CONSTRAINT Retransmision_pk PRIMARY KEY,
+    Nombre VARCHAR(40),
+    momentoDia VARCHAR(20),
+    Medio VARCHAR(30)
+);
+CREATE TABLE Artista (
+    MomentoDia VARCHAR(20) CONSTRAINT Artista_pk PRIMARY KEY,
+    Nombre VARCHAR(40) NOT NULL,
+    Cache INT NOT NULL,
+    Telefono INT NOT NULL,
+    NombreRetransmision VARCHAR(20)
+);
+
+CREATE TABLE Escenario(
+    ID VARCHAR(8) CONSTRAINT Escenario_pk PRIMARY KEY,
+    Nombre VARCHAR(40),
+    Comunicador VARCHAR(40),
+    Entrada_Escenario VARCHAR(20)
+    
+);
+
+
+CREATE TABLE Publico(
+    Nombre VARCHAR(40) NOT NULL,
+    Precio_Entrada INT NOT NULL,
+    Entrada_escenario VARCHAR(20) CONSTRAINT Entrada_escenario_pk PRIMARY KEY
+);
+
+    
+
+
+CREATE TABLE Puestos(
+    ID VARCHAR(8) CONSTRAINT Puestos_pk PRIMARY KEY,
+    Nombre VARCHAR(40),
+    puesto VARCHAR(20),
+    Nombre_puesto VARCHAR(20)
+
+);
+
+CREATE TABLE Merchandising(
+    Nombre_puesto VARCHAR(40) CONSTRAINT Profesion_pk PRIMARY KEY,
+    tipo VARCHAR(40),
+    modelo VARCHAR(40) NOT NULL,
+    precio VARCHAR(40)
+);
+
+CREATE TABLE Patrocinador(
+   ID VARCHAR(8) CONSTRAINT Patrocinador_pk PRIMARY KEY,
+   Nombre VARCHAR(40),
+   nombre_empresa VARCHAR(40),
+   aportacion INT NOT NULL
+);
+
+
+  
+
+
+ALTER TABLE Director ADD CONSTRAINT Director_Asesoria_fk FOREIGN KEY (ID) references Asesoria(ID);
+
+ALTER TABLE Director ADD CONSTRAINT Director_Empleados_fk FOREIGN KEY (ID) references Empleados(ID);
+
+ALTER TABLE Asesoria ADD CONSTRAINT Asesoria_Empleados_fk FOREIGN KEY (ID) references Empleados(ID);
+
+ALTER TABLE Equipo_técnico ADD CONSTRAINT Equipo_tecnico_Empleados_fk FOREIGN KEY (ID) references Empleados(ID);
+
+ALTER TABLE Materiales ADD CONSTRAINT Materiales_Empleados_fk FOREIGN KEY (ID) references Empleados(ID);
+
+ALTER TABLE Retransmision ADD CONSTRAINT Retransmision_Equipo_Tecnico_fk FOREIGN KEY(ID) references Equipo_Técnico(ID);
+    ALTER TABLE Retransmision ADD CONSTRAINT Retransmisión_Equipo_Técnico_fk FOREIGN KEY(ID) references  Equipo_Técnico(ID);
+    ALTER TABLE  Puestos ADD CONSTRAINT Puestos_Equipo_Técnico_fk FOREIGN KEY(ID) references Equipo_Técnico(ID);
+ALTER TABLE patrocinador ADD CONSTRAINT Patrocinador_Equipo_Tecnico_fk FOREIGN KEY(ID) references Equipo_técnico (ID);
+
+ALTER TABLE retransmision ADD CONSTRAINT artista_retransmision1_fk FOREIGN KEY (MomentoDia) references Artista (MomentoDia);
+ALTER TABLE Escenario ADD CONSTRAINT Escenario_publico_fk FOREIGN KEY (Entrada_escenario) references Publico(Entrada_escenario);
+
+ALTER TABLE Puestos ADD CONSTRAINT  Merchandising_puestos_fk FOREIGN KEY (Nombre_puesto) references Merchandising (nombre_puesto);
+

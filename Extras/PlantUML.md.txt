@@ -1,0 +1,94 @@
+@startuml
+class director{
+-ID
+-Telefono
+-FechaNac
+-Nombre
+-Puesto
+-FechaIng
+}
+class Asesoria{
+-nombreEmpresa
+-ID
+-Nombre
+-Localizacion
+-Puesto
+}
+class Empleado{
+-Puesto
+-FechaIng
+-Nombre
+-ID
+-Salario
+}
+class materiales{
+-Nombre
+-ID
+-Salario
+-Especialidad
+}
+class equipoTecnico{
+-Nombre
+-FechaIng
+-ID
+-Area
+-Puesto
+}
+class Retransmision{
+-ID
+-MomentoDia
+-Nombre
+-medio
+}
+class artista{
+-mommentoDia
+-cache
+-nombreTransmision
+-Nombre
+-Telefono
+}
+class Escesario{
+-ID
+-Nombre
+-comunicador
+-entrada_escenario
+}
+
+class publico{
+-precioEntrada
+-EntradaEscenario
+-Nombre
+}
+class puestos{
+-Nombre
+-ID
+-tipo
+-puesto
+}
+class merchandising{
+-Nombre_puesto
+-tipo
+-modelo
+-precio
+}
+class patrocinador{
+-Nombre
+-Nombre_Empresa
+-Aportacion
+-ID
+}
+director "1..2" -- "1..*" Asesoria
+director "1..2" -- "1..*" Empleado
+Asesoria "1..*" -- "1..*" Empleado
+(equipoTecnico, Empleado) "1..*" -- "1..*" materiales
+
+
+equipoTecnico "1..*" -- "1..*" Retransmision
+equipoTecnico "1..*" -- "1..*" Escesario
+equipoTecnico "1..*" -- "1..*" Puesto
+equipoTecnico "1..*" -- "1..*" patrocinador
+
+Retransmision "1..*" -- "1..*" artista
+Escesario "1..*" -- "1..*" publico
+puestos "1..*" -- "1..*" merchandising
+

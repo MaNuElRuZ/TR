@@ -1,0 +1,24 @@
+## Introducción
+
+El proyecto que quiero organizar es un festival nacional llamado *QuevedoFest*. La organizacion de festivales de este calibre se necesita tanto una buena gestion, tanto en el presupuesto como en la anticipacion de posibles problemas que pueden llegar a surgir en un futuro. Esta mala o buena gestion de proyecto puede afectar no solo a esta area financiera en la que estamos trabajando, si no en todas las areas pudiendo llegar a ser determinante por lo que habra que organizarlo de la mejor manera posible y no olvidarnos de ningun punto clave.
+A continuacion veremos la preparacion del evento destacado en varios puntos: 
+    presentar un presupuesto con claridad y asegurarse de que sea facil de interpretar. Esta parte es importante recalcarla por a las posibles finaciaciones que se puede llegar a percibir debido a que segun las estadísticas, a medida que van pasando los años se va haciendo más festivales de musica, esto es debido gracias al impacto economico que produce, muchas veces mas grande que la que general el futbol o el baloncesto cada año.
+https://album.mediaset.es/eimg/2019/07/14/cGdKwQMNfHKrVMsAds8fk7.jpg?w=1024
+
+ Y es cierto que estamos en estos momentos en una epoca un poco infortuna debido al Covid-19 pero se podrá organizar de la misma manera y con la misma multitud que habia hace unos años con las pruebas del PCR tanto al publico como a todo nuestro personal, con las medidas sanitarias correspondientes para que sea seguro para todos como ya se esta empezando a hacer en algunos recintos, esta es una buena señal para los comienzos de grandes festivales:
+
+https://www.rtve.es/noticias/20210427/concierto-love-of-lesbian-barcelona-demuestra-grandes-eventos-pueden-ser-seguros/2087837.shtml
+
+Otro punto muy importante es la administracion de todo tipo de Gastos o ingresos en un evento, estos datos se tiene que registrar por algun programa debido a la complejidad de la misma y las posibles confusiones que puede generar saliendo posibles errores, ya sea con el numero de entradas que se venden, la recaudacion por la retransmisión del festival o las grabaciones que se hará antes y despues para tener mayor atractivo....
+Todo esto tendra que registrarse de alguna manera sin el mas minimo error, por ello nos encargaremos de tener al personal mas cualificado que sabrá manejar, el que es para nosotros el mejor paquete de software para este tipo de eventos multitudinarios, el Microsoft Excel, es un metodo bastante util para los resumenes de presupuesto. Todo esto con la finalidad de tenerlo todo al milimetro con sus respectivas copias de seguridad.
+
+Y como último punto a destacar seria los asuntos legales del festival, se encargara un grupo de profesionales sobre el cumplimiento normativo y de evitar las responsabilidades economicas: como puede ser las multas, inspeccion de trabajo, permisos y licencias necesarias para poder organizar dicho evento, denuncias ante consumo... 
+Tambien se quiere conseguir el ahorro fiscal y la optimización de costes como son la deduccion fiscal del 20% para la musica en directo, la negociacion contractual con artistas, limitar pagos a la SGAE (es una entidad encargada de la defensa y la gestion colectiva de los derechos de propiedad intelectual).
+Este area esencial en proyectoste puede dar mas ventajas que inconvenientes, por lo que veremos que cosas nos aporta para resaltar esta area: 
+    Mantener segura la informacion juridica, de se lo contrario tendrias muchos problemas.
+    No necesitas intermediarios para cualquier amparo juridico, tendrás una serie de personas con la que podras contar con ellos
+    Elaboración de contratos a artistas, empleados... A todo tipo de persona que trabaje dentro del festival, disminuyendo la posibilidad de errores y de posteriormente de problemas legales
+    No se tendra tanta preocupacion esta area y te podrás centrar con mayor intensidad en otras areas de la empresa.
+
+**Oportunidad de negocio** ¿Por qué hacemos esta inversion en el Proyecto QuevedoFest?
+Esta industria anteriormente ha sido llevado por pequeñas empresas, artistas... con condiciones precarias y sin ninuna organizacion debido a la complejidad que a ellos le suponia subir al escenario y tocar o cantar sus canciones e irse a casa pero la el entorno de la música ha cambiado, ya que se va viendo que cada vez mas personas se unen a este tipo de festivales, grandes conciertos... Son millones de personas que estan detras de todo esto, no solo artistas, ni espectadores si no también empresas colaboradoras que ven una oportunidad de negocio en ella para poder sacarle con la mejor gestion posible.

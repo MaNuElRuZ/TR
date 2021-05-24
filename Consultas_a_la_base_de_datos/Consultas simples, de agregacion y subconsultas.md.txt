@@ -1,0 +1,323 @@
+##Consultas frecuentes
+
+*1. Id de los trabajadores de la asesoria que trabajen en la calle del encuentro 20*
+
+```sql
+select id from asesoria where localización = 'Calle del encuentro 20';
+```
+```
+    id
+----------
+ 10001000
+ 10001001
+(2 rows)
+
+```
+
+
+*2.Los puestos que hay dentro de la asesoria para hacerse cargo de los asuntos legales*
+
+```sql
+select distinct(nombre) from asesoria;
+```
+
+```
+       nombre
+---------------------
+ Director
+ Abogado
+ Relaciones publicas
+(3 rows)
+```
+*3.Seleccioname todos los datos de los trabajadores de la tabla empleados que se han unido desde principios de julio hasta principios de agosto.*
+
+```sql
+select * from empleados where fechaing between '2018-07-01' and '2018-08-01';
+```
+
+```
+    id    |             nombre              |   puesto    |  fechaing  | fecha_nac  | salario
+----------+---------------------------------+-------------+------------+------------+---------
+ 10001200 | GURINTE GARRUCA, PEPA           | Staff       | 2018-07-24 | 1990-01-31 |    1200
+ 10001201 | HUBIERTO CASTRO, MALU           | Staff       | 2018-07-25 | 1992-04-24 |    1100
+ 10001202 | MORALES CASTRO, MIRIAM          | Staff       | 2018-07-25 | 1996-01-24 |    1200
+ 10001203 | YERRY JUEN, PABLO               | Staff       | 2018-07-24 | 1994-11-24 |    1000
+ 10001204 | TRABUL FLICA, ANTON             | Staff       | 2018-07-26 | 1996-08-24 |    1200
+ 10001205 | PROFETA AISTON, POL             | Staff       | 2018-07-25 | 1999-07-21 |    1300
+ 10001206 | ERREJON FEDE, ALAN              | Staff       | 2018-07-27 | 1995-07-21 |    1300
+ 10001300 | PEREZ GARCIA, ALMA              | Tecnico     | 2018-07-20 | 1992-09-24 |    1400
+ 10001301 | GRAND FREN, ALBA                | Tecnico     | 2018-07-19 | 2001-10-03 |    1700
+ 10001302 | DENE BUEN, GLORIA               | Tecnico     | 2018-07-23 | 1978-10-29 |    1300
+ 10001303 | CALI DANDE, ESPERANZA           | Periodista  | 2018-07-25 | 1998-01-24 |    1200
+ 10001304 | FREE CALUM, FRED                | Periodista  | 2018-07-22 | 1982-02-24 |    1200
+ 10001305 | GUENA FURRO, FLORENCIA          | Periodista  | 2018-07-23 | 1994-12-29 |    1200
+ 10001306 | SUNAMI PANAIFO, MARTA PAOLA     | Coordinador | 2018-07-25 | 1996-05-30 |    1200
+ 10001307 | ELVER TRONE, RODOLFA            | Coordinador | 2018-07-28 | 1998-12-30 |    1200
+ 10001308 | BARBA ZAPATA, MARTA             | Coordinador | 2018-07-25 | 1985-10-24 |    1200
+ 10001309 | ANGUITA MERCHAN, SILVIA, ALAN   | Coordinador | 2018-07-15 | 1991-10-04 |    1200
+ 10001310 | SANTIAGO CARAZO, RODOLFA        | Coordinador | 2018-07-20 | 1998-10-24 |    1200
+ 10001311 | MORILLA CASILLAS, MARIA         | Coordinador | 2018-07-20 | 1992-12-24 |    1200
+ 10001312 | MONTALVO VAZ, MARIO             | Coordinador | 2018-07-20 | 1998-06-01 |    1200
+ 10001313 | PURIFICACION MOZO, CENTENO      | Coordinador | 2018-07-20 | 1994-02-08 |    1200
+ 10001314 | TORRENT MONGE, JESUS            | Coordinador | 2018-07-30 | 1998-01-03 |    1200
+ 10001315 | GOMEZ DEL RIO, ANGELES          | Coordinador | 2018-07-21 | 1984-09-24 |    1200
+ 10001316 | BAUTISTA PUJOL, CAROLINA        | Coordinador | 2018-07-23 | 1992-01-24 |    1200
+ 10001317 | VARO DE BLAS, NATALIA           | Coordinador | 2018-07-21 | 1998-03-24 |    1200
+ 10001318 | MARI PUERTA, ESTHER             | Coordinador | 2018-07-20 | 1988-02-24 |    1200
+ 10001319 | TORRECILLAS CASTAÑEDA, CONSUELO | Coordinador | 2018-07-20 | 1998-09-30 |    1200
+ 10001320 | ARTEAGA MANRESA, CONCEPCION     | Coordinador | 2018-07-25 | 1998-12-08 |    1200
+ 10001321 | MORILLA HUERTAS, RAMIRO         | Coordinador | 2018-07-06 | 1998-03-31 |    1200
+ 10001322 | GARCIA PERREN, MALIMA           | Vendedor    | 2018-07-21 | 1998-08-01 |    1200
+ 10001323 | PROBOLO FLON, MANI              | Vendedor    | 2018-07-21 | 1998-06-14 |    1200
+(31 rows)
+````
+
+*4. Seleccion todos los datos de los trabajadores de la tabla empleados que tenga un salario = a 1400*
+
+
+```sql
+select * from empleados where salario = 1400;
+```
+
+```
+
+    id    |       nombre       | puesto  |  fechaing  | fecha_nac  | salario
+----------+--------------------+---------+------------+------------+---------
+ 10001300 | PEREZ GARCIA, ALMA | Tecnico | 2018-07-20 | 1992-09-24 |    1400
+(1 row)
+```
+
+*5. Trabajadores que trabajen en el area 2 dentro del equipo tecnico*
+
+```sql
+select * from equipo_técnico where area='2';
+```
+
+```
+    id    |             nombre              |   puesto    | area | espacio
+----------+---------------------------------+-------------+------+---------
+ 10001306 | SUNAMI PANAIFO, MARTA PAOLA     | Coordinador |    2 | abierto
+ 10001307 | ELVER TRONE, RODOLFA            | Coordinador |    2 | abierto
+ 10001308 | BARBA ZAPATA, MARTA             | Coordinador |    2 | abierto
+ 10001309 | ANGUITA MERCHAN, SILVIA         | Coordinador |    2 | abierto
+ 10001310 | SANTIAGO CARAZO, RODOLFA        | Coordinador |    2 | abierto
+ 10001311 | MORILLA CASILLAS, MARIA         | Coordinador |    2 | abierto
+ 10001312 | MONTALVO VAZ, MARIO             | Coordinador |    2 | abierto
+ 10001313 | PURIFICACION MOZO, CENTENO      | Coordinador |    2 | abierto
+ 10001314 | TORRENT MONGE, JESUS            | Coordinador |    2 | abierto
+ 10001315 | GOMEZ DEL RIO, ANGELES          | Coordinador |    2 | abierto
+ 10001316 | BAUTISTA PUJOL, CAROLINA        | Coordinador |    2 | abierto
+ 10001317 | VARO DE BLAS, NATALIA           | Coordinador |    2 | abierto
+ 10001318 | MARI PUERTA, ESTHER             | Coordinador |    2 | abierto
+ 10001319 | TORRECILLAS CASTAÑEDA, CONSUELO | Coordinador |    2 | abierto
+ 10001320 | ARTEAGA MANRESA, CONCEPCION     | Coordinador |    2 | abierto
+ 10001321 | MORILLA HUERTAS, RAMIRO         | Coordinador |    2 | abierto
+(16 rows)
+
+```
+*6. ID y medio de transmision de los trabajadores del equipo de retransmision que esten en la Television*
+
+```sql
+select id, medio from retransmision where medio = 'TV';
+```
+
+```
+    id    | medio
+----------+-------
+ 10001301 | TV
+ 10001304 | TV
+(2 rows)
+
+```
+*7. Selecciona el nombre del artista y la retransmision que se encargará de 18:00 a 22:00*
+
+
+```sql
+select nombre from artista where momentodia = '18:00 - 22:00';
+```
+
+```
+       nombre
+---------------------
+ DREW BIEBER, JUSTIN
+(1 row)
+
+```
+
+*8. Selecciona los comunicadores que tienen los empleados del escenario*
+
+```sql
+select distinct(comunicador) from escenario;
+```
+
+```
+ comunicador
+-------------
+ movil
+(1 row)
+```
+*9. Selecciona el nombre completo de las personas que tienen en alguna parte 'coto'*
+
+```sql
+select nombre from publico where nombre like '%COTO%';
+```
+
+```
+           nombre
+-----------------------------
+ COTO MANGAS, FRANCISCO JOSE
+ COTO MANGAS, JESUS
+(2 rows)
+```
+
+
+*10. Selecciona los puestos que hay en el festival*
+
+```sql
+ select nombre_puesto from puestos;
+```
+
+```
+ nombre_puesto
+---------------
+ FCOLGANTESF
+ HCAMISETASH
+ PPULSERASP
+ YGORRASY
+(4 rows)
+```
+*11. Selecciona los nombres de la empresas que comienzan por 'C'*
+
+```sql
+select nombre_empresa from patrocinador where nombre like 'C%';
+```
+
+```
+  nombre
+-----------
+ COCA COLA
+(1 row)
+```
+
+
+
+*12. Seleccioname el id desde la tabla empleado trabaje en el evento y este en el area de materiales trabajando en la especialidad de transportista y cobre 1100 euros*
+
+```sql
+select id from empleados where id = (select id from materiales where especialidad = 'Transportista' and salario = '1100');
+```
+
+```
+    id
+----------
+ 10001201
+(1 row)
+```
+
+*13. Selecciona los trabajadores que trabajen en el mismo puesto con ENZO GAMBINO, PEPE*
+
+```sql
+select nombre from empleados where puesto = (select puesto from empleados where nombre ='ENZO GAMBINO, PEPE');
+```
+```
+          nombre
+--------------------------
+ DOS SANTOS AVEIRO, PEDRO
+ DURRAN SANTOS, GUILLERMO
+ ENZO GAMBINO, PEPE
+ RIQUELME APOSTRE, ALICIA
+ ENVESTIR GARCIA, LUNA
+ RUZ CASTRO, MANUEL
+ GLANDO FIRRUTA, CESAR
+ LEGAL PROBLO, ALBA
+ EMERISCO JUSTA, MIGUEL
+ MEJIDE CRITICO, RISTO
+(10 rows)
+
+```
+
+*14. Selecciona cuantos trabajadores hay en cada uno de las profesiones asignadas en la asesoria*
+
+```sql
+select count(nombre), nombre from asesoria group by nombre;
+```
+```
+ count |       nombre
+-------+---------------------
+     2 | Director
+    10 | Abogado
+     4 | Relaciones publicas
+(3 rows)
+
+```
+
+*15. Selecciona el salario medio de todos los empleados*
+
+```sql
+select avg(salario) from empleados;
+```
+
+```
+          avg
+-----------------------
+ 1507.8431372549019608
+(1 row)
+```
+
+*16. selecciona cuantos empleados del equipo tecnico estan en sitio cerrado o en un sitio abierto*
+
+```sql
+select count(espacio), espacio from equipo_técnico group by espacio;
+```
+
+```
+ count | espacio
+-------+---------
+    19 | abierto
+    11 | cerrado
+(2 rows)
+
+```
+
+*17. Agrupalos por puestos e indica cual es, dentro de un puesto, el que menos cobra y que sea mayor de 1200*
+
+```sql
+select min(salario) from empleados group by puesto having avg(salario) > 1200;
+```
+
+```
+ min
+------
+ 2500
+ 5000
+ 1300
+ 1900
+(4 rows)
+```
+
+*18. Seleccioname al empleado con el salario mas alto del puesto 'periodista' que tenga mas alto el salario que la media del puesto 'Técnico'*
+
+```sql
+select max(salario), nombre from empleados where salario > (select avg(salario) from empleados where puesto = 'Staff') and puesto = 'Periodista' group by nombre;
+```
+
+```
+ max  |         nombre
+------+------------------------
+ 1200 | CALI DANDE, ESPERANZA
+ 1200 | FREE CALUM, FRED
+ 1200 | GUENA FURRO, FLORENCIA
+(3 rows)
+```
+
+*19. Seleccioname el maximo salario mas alto del puesto 'periodista' que tenga el mismo que el trabajador que menos cobre cuyo puesto es relaciones publicas*
+
+```sql
+select max(salario), nombre from empleados where puesto = 'Periodista' and salario = (select min(salario) from empleados where puesto = 'Relaciones Publicas') group by nombre;
+```
+```
+ max | nombre
+-----+--------
+(0 rows)
+
+```
